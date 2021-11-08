@@ -4,8 +4,7 @@
 
     <div class="jumbotron">
         <h1>
-            <asp:Image ID="Image1" runat="server" Height="219px" ImageUrl="~/Fotos/Pro-Shop-banner.jpg" Width="969px" />
-        </h1>
+            &nbsp;</h1>
         <h1>GolfShot</h1>
         <p class="lead">Welcome to GolfShot! Where you can share your experience with your friends!.</p>
     </div>
@@ -31,5 +30,7 @@
             </p>
         </div>
     </div>
+
+    
 
 </asp:Content>
