@@ -4,6 +4,5 @@
     <button><a href="/Upload">Upload Image</a></button>
     <h2><%: Title %>.</h2>
     <h3>Here you can View al the uploaded pictures!</h3>
-    <p></p>
-    
+        
 </asp:Content>
