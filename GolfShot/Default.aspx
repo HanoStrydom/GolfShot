@@ -3,38 +3,31 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
+        <h1>
+            <asp:Image ID="Image1" runat="server" Height="219px" ImageUrl="~/Fotos/Pro-Shop-banner.jpg" Width="969px" />
+        </h1>
         <h1>GolfShot</h1>
         <p class="lead">Welcome to GolfShot! Where you can share your experience with your friends!.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2>View Images!</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                To view the images, you have to log in! Press "Log In" at the top right corner. If you do not have an account, be sure to click on "Register".
+                After you log in, you wil be redirected to the viewing page. You can also choose to upload images from there.
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2>Upload Images!</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                To upload images, be sure to log in, and then click on the button to upload an image!
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
+            <h2>Contact Us!</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
+                <a class="btn btn-default" href = "mailto: hanostrydom8@gmail.com">Send Email</a>
             </p>
         </div>
     </div>

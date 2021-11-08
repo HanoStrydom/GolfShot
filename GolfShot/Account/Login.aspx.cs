@@ -38,7 +38,7 @@ namespace GolfShot.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
-                        Response.Redirect("/About");
+                        Response.Redirect("/View");
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         
                         break;
