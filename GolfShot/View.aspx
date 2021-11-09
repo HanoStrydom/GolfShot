@@ -5,19 +5,17 @@
     <h2><%: Title %>.</h2>
     <h3>Here you can View al the uploaded pictures!</h3>
     <p>
-        <asp:DataList ID="DataList1" runat="server" OnSelectedIndexChanged="DataList1_SelectedIndexChanged">
+        <asp:DataList ID="DataList1" runat="server">
             <ItemTemplate>
-                <table>
-                    <tr>
-                        <td>
-                            <img src ="<%#Eval("image") %>" height="100" width ="100" /> </td>
-                        <td>
-                            <%#Eval("uname") %>
-                        </td>
+                <table> 
+                    <tr> 
+                        <td> <img src="<%#Eval("ImagePath") %>" height ="200", width = "200" /></td>
+                        <td> <%# Eval("Uploader") %> </td>
+                        <td><button> <a href="<%#Eval("ImagePath") %>">Download Now</a> </button></td>
                     </tr>
                 </table>
             </ItemTemplate>
         </asp:DataList>
     </p>
-        
+
 </asp:Content>
