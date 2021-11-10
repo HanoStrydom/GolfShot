@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Upload Images" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Upload.aspx.cs" Inherits="GolfShot.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <button><a href="/View">View Images</a></button>
+    
     <h2><%: Title %>.</h2>
     <h3>Please upload your images here :</h3>
     <p>
@@ -47,7 +47,9 @@
                 </td>
             </tr>
             <tr>
-                <td class="modal-sm" style="width: 129px; margin-left: 80px">&nbsp;</td>
+                <td class="modal-sm" style="width: 129px; margin-left: 80px">
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Upload Image" />
+                </td>
                 <td class="text-center">
                     <asp:Label ID="Label6" runat="server" Text="Label" Visible="False"></asp:Label>
                 </td>
@@ -60,10 +62,8 @@
             </tr>
         </table>
     </p>
+    <p> <button style="width: 157px; height: 44px"><a href="/View">View Images</a></button> </p>
     <p>
         &nbsp;</p>
-    <p>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Upload Image" />
-    </p>
     
 </asp:Content>

@@ -70,6 +70,13 @@ namespace GolfShot
             {
                 Response.Write("<script> alert('Please upload a valid photo!')</script>");
             }
+
+
+            txtImageName.Text = "";
+            txtLocationTaken.Text = "";
+            txtTaken.Text = "";
+            txtUploader.Text = "";
+            
         }
     }
 }

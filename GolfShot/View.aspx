@@ -7,8 +7,8 @@
     <h2 align="center"><strong> <%: Title %>. </strong><table style="width:100%;">
         <tr>
             <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 234px"><a href="/Upload">Upload Image</a></button></td>
-            <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 234px"><a href="/User">My Images</a></button></td>
-            <td style="width: 301px"></td>
+            <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 234px"><a href="/User">MyImages</a></button></td>
+            <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 234px"><a href="/MetaData">ImageInformation</a></button></td>
         </tr>
         </table>
     </h2>
