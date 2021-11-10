@@ -15,13 +15,19 @@ namespace GolfShot
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie test = Request.Cookies["UserLogIn"];
+            String name = "";
+            if (test != null)
+            {
+                name = test["mail"];
+            }
 
             try
             {
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from ImageToDB WHERE Uploader = 'Hano'";
+                cmd.CommandText = "select * from ImageToDB WHERE UserMail = '" + name.ToString() + "'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

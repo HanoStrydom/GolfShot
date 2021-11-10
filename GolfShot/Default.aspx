@@ -4,7 +4,14 @@
 
     <div class="jumbotron">
         <h1>
-            &nbsp;</h1>
+            <table style="width:100%;">
+                <tr>
+                    <td class="text-center">
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View Images" Visible="False" Width="452px" />
+                    </td>
+                </tr>
+            </table>
+        </h1>
         <h1>GolfShot</h1>
         <p class="lead">Welcome to GolfShot! Where you can share your experience with your friends!.</p>
     </div>

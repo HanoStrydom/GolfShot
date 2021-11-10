@@ -9,6 +9,15 @@
         .auto-style6 {
             width: 518px;
         }
+
+        table,th,td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        table{
+            border-spacing: 15px;
+        }
     </style>
 </head>
 <body>
