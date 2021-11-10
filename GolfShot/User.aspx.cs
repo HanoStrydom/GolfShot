@@ -42,5 +42,20 @@ namespace GolfShot
                 Response.Write("<script> alert('Error!')</script>");
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Default");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/View");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/MetaData");
+        }
     }
 }
