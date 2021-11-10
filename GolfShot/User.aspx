@@ -6,28 +6,32 @@
 <head runat="server">
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 417px;
-        }
-        .auto-style2 {
-            text-align: center;
-        }
-        .auto-style3 {
-            width: 417px;
-            text-align: center;
-        }
-        .auto-style4 {
-            width: 417px;
-            height: 23px;
-        }
-        .auto-style5 {
-            height: 23px;
+        .auto-style6 {
+            width: 518px;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+
+            <table style="width:100%;">
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
 
             <asp:DataList ID="DataList1" runat="server">
             <ItemTemplate>

@@ -38,6 +38,10 @@ namespace GolfShot.Account
                 switch (result)
                 {
                     case SignInStatus.Success:
+                        HttpCookie userLoggedIn = new HttpCookie("UserLogIn");
+                        userLoggedIn["mail"] = Email.Text;
+                        Response.Cookies.Add(userLoggedIn);
+                        userLoggedIn.Expires = DateTime.Now.AddDays(5);                       
                         Response.Redirect("/View");
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         

@@ -17,6 +17,14 @@ namespace GolfShot
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie test = Request.Cookies["UserLogIn"];
+            String name = "";
+            if(test != null)
+            {
+                name = test["mail"];
+            }
+            Label1.Text = name;
+
             try
             {
                 con.Open();

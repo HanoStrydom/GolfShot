@@ -3,7 +3,9 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <button><a href="/Upload">Upload Image</a></button>
     <h2><%: Title %>.</h2>
-    <h3>Here you can View al the uploaded pictures!</h3>
+    <h3>Here you can View al the uploaded pictures,
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    </h3>
     <p>
         <asp:DataList ID="DataList1" runat="server">
             <ItemTemplate>
