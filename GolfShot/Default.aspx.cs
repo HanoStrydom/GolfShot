@@ -20,6 +20,7 @@ namespace GolfShot
             if(loggedIn == true)
             {
                 Button1.Visible = true;
+                Button2.Visible = true;
             }
         }
 
@@ -31,6 +32,11 @@ namespace GolfShot
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("/View");
+        }
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("/Upload");
         }
     }
 }

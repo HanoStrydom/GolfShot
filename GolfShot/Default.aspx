@@ -3,15 +3,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>
-            <table style="width:100%;">
-                <tr>
-                    <td class="text-center">
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View Images" Visible="False" Width="452px" />
-                    </td>
-                </tr>
-            </table>
-        </h1>
         <h1>GolfShot</h1>
         <p class="lead">Welcome to GolfShot! Where you can share your experience with your friends!.</p>
     </div>
@@ -23,11 +14,17 @@
                 To view the images, you have to log in! Press "Log In" at the top right corner. If you do not have an account, be sure to click on "Register".
                 After you log in, you wil be redirected to the viewing page. You can also choose to upload images from there.
             </p>
+            <p>
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="View Images" Visible="False" Width="372px" />
+            </p>
         </div>
         <div class="col-md-4">
             <h2>Upload Images!</h2>
             <p>
                 To upload images, be sure to log in, and then click on the button to upload an image!
+            </p>
+            <p>
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click1" Text="Upload Images" Visible="False" Width="372px"/>
             </p>
         </div>
         <div class="col-md-4">
