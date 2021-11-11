@@ -40,6 +40,7 @@
                 <table> 
                     <tr> 
                         <td> <img src="<%#Eval("ImagePath") %>" height ="200", width = "200" /></td>
+                        <td align ="center"> <h3> <%# Eval("ImagePath") %> </h3> </td>
                     </tr>
                 </table>
             </ItemTemplate>

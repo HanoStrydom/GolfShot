@@ -58,6 +58,10 @@ namespace GolfShot
                 CloudBlobContainer container = blobClient.GetContainerReference("fotos");
                 CloudBlockBlob blockBlob = container.GetBlockBlobReference(FileUpload1.FileName);
 
+                //blockBlob.DeleteIfExists("Jeffreys.jpg");
+
+
+
                 using (FileUpload1.PostedFile.InputStream)
                 {
                     blockBlob.UploadFromStream(FileUpload1.PostedFile.InputStream);

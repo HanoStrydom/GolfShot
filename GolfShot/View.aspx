@@ -27,6 +27,12 @@
                                <h1> Uploader</h1>
                            </td>
                            <td>
+                               <h1> Golf Course</h1>
+                           </td>
+                           <td>
+                               <h1> Comment</h1>
+                           </td>
+                           <td>
                                <h1> Date Uploaded</h1>
                            </td>
                            <td>
@@ -34,8 +40,10 @@
                            </td>
                     </tr>
                     <tr> 
-                        <td align ="center"> <img src="<%#Eval("ImagePath") %>" height ="200", width = "200" /></td>
-                        <td align ="center"> <h3> <%# Eval("Uploader") %> </h3> </td>                  
+                        <td align ="center"> <img src="<%#Eval("ImagePath") %>" height ="300", width = "350" /></td>
+                        <td align ="center"> <h3> <%# Eval("Uploader") %> </h3> </td>
+                        <td align ="center"> <h3> <%# Eval("GolfCourse") %> </h3> </td>
+                        <td align ="center"> <h3> <%# Eval("Comment") %> </h3> </td>
                         <td align ="center"> <h3> <%# Eval("DateUploaded") %> </h3></td>
                         <td align ="center"><button> <a href="<%#Eval("ImagePath") %>">Download Now</a> </button></td>
                     </tr>
