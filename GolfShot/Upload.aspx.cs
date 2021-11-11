@@ -14,10 +14,15 @@ namespace GolfShot
 {
     public partial class Contact : Page
     {
-
+        public String name = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            HttpCookie test = Request.Cookies["UserLogIn"];
             
+            if (test != null)
+            {
+                name = test["mail"];
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -32,13 +37,16 @@ namespace GolfShot
                 date = DateTime.Now;
 
                 String path = "https://cmpgprojectstorage.blob.core.windows.net/fotos/";
+                String File_name = "";
 
                 //This is to insert the metadata
                 if (FileUpload1.HasFile)
                 {
                     path += FileUpload1.PostedFile.FileName;
+                    File_name = FileUpload1.PostedFile.FileName;
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("INSERT into ImageToDB(Uploader, ImageName, ImageLocation, DateTaken, DateUploaded, ImagePath) values('" + txtUploader.Text + "','" + txtImageName.Text + "','" + txtLocationTaken.Text + "' ,'" + txtTaken.Text + "' ,'" + date + "' ,'" + path + "')", con);
+                    //SqlCommand cmd = new SqlCommand("INSERT into ImageToDB(Uploader, ImageName, ImageLocation, DateTaken, DateUploaded,ImagePath) values('" + txtUploader.Text + "','" + File_name + "','" + txtLocationTaken.Text + "' ,'" + txtTaken.Text + "' ,'" + date + "' ,'" + path + "')", con);
+                    SqlCommand cmd = new SqlCommand("INSERT into ImageToDB(Uploader, ImageName, ImageLocation, DateTaken, DateUploaded,ImagePath, UserMail, GolfCourse, Comment) values('" + txtUploader.Text + "','" + File_name + "','" + txtLocationTaken.Text + "' ,'" + txtTaken.Text + "' ,'" + date + "' ,'" + path + "','" + name + "','" + txtCourse.Text + "','" + txtComment.Text + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     Label6.Visible = true;
@@ -76,10 +84,11 @@ namespace GolfShot
             }
 
 
-            txtImageName.Text = "";
+            txtCourse.Text = "";
             txtLocationTaken.Text = "";
             txtTaken.Text = "";
             txtUploader.Text = "";
+            txtComment.Text = "";
             
         }
     }

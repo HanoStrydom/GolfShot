@@ -16,10 +16,10 @@
             </tr>
             <tr>
                 <td class="modal-sm" style="width: 129px">
-                    <asp:Label ID="Label3" runat="server" Text="Image Name: "></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Course Name: "></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtImageName" runat="server" Width="141px"></asp:TextBox>
+                    <asp:TextBox ID="txtCourse" runat="server" Width="141px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -31,11 +31,19 @@
                 </td>
             </tr>
             <tr>
-                <td class="modal-sm" style="width: 129px; margin-left: 80px">
+                <td class="modal-sm" style="width: 129px; margin-left: 80px; height: 33px;">
                     <asp:Label ID="Label5" runat="server" Text="Date Taken: "></asp:Label>
                 </td>
-                <td>
+                <td style="height: 33px">
                     <asp:TextBox ID="txtTaken" runat="server" Width="141px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="modal-sm" style="width: 129px; margin-left: 80px">
+                    <asp:Label ID="Label7" runat="server" Text="Comment: "></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtComment" runat="server" Width="141px"></asp:TextBox>
                 </td>
             </tr>
             <tr>

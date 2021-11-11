@@ -42,13 +42,13 @@ namespace GolfShot
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// txtImageName control.
+        /// txtCourse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImageName;
+        protected global::System.Web.UI.WebControls.TextBox txtCourse;
 
         /// <summary>
         /// Label4 control.
@@ -85,6 +85,24 @@ namespace GolfShot
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTaken;
+
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// txtComment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComment;
 
         /// <summary>
         /// Label2 control.
