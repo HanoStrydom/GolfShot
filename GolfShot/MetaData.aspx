@@ -28,19 +28,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:DataList ID="DataList1" runat="server">
-                        <ItemTemplate>
-                    <table>
-                    <tr>
-                        <td> <h3> Image </h3> </td>
-                    </tr>
-                    <tr> 
-                        <td> <img src="<%#Eval("ImagePath") %>" height ="200", width = "200" /></td>
-                    </tr>
-                </table>
-            </ItemTemplate>
-                    </asp:DataList>
-                </td>
+                    &nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>

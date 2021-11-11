@@ -82,60 +82,143 @@ namespace GolfShot
             }
         }
 
+        public void selectQuery()
+        {
+            //Just Name
+            if(txtName.Text != "" && txtLocation.Text == "" && txtCourse.Text == "")
+            {
+                String name = txtName.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE Uploader = '" + name.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                btnAll.Visible = true;
+            }
+            //Just Location
+            if(txtName.Text == "" && txtLocation.Text != "" && txtCourse.Text == "")
+            {
+                String name = txtLocation.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE ImageLocation = '" + name.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                btnAll.Visible = true;
+            }
+            //Just Course
+            if(txtName.Text == "" && txtLocation.Text == "" && txtCourse.Text != "")
+            {
+                String name = txtCourse.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE GolfCourse = '" + name.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                
+            }
+            //Name and Location
+            if (txtName.Text != "" && txtLocation.Text != "" && txtCourse.Text == "")
+            {
+                String name = txtName.Text;
+                String location = txtLocation.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE Uploader = '" + name.ToString() + "' AND ImageLocation ='" + location.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                
+            }
+            //Name and Course
+            if (txtName.Text != "" && txtLocation.Text == "" && txtCourse.Text != "")
+            {
+                String name = txtName.Text;
+                String course = txtCourse.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE Uploader = '" + name.ToString() + "' AND GolfCourse ='" + course.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                
+            }
+            //Location and Course
+            if (txtName.Text == "" && txtLocation.Text != "" && txtCourse.Text != "")
+            {
+                String name = txtLocation.Text;
+                String course = txtCourse.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE ImageLocation = '" + name.ToString() + "' AND GolfCourse ='" + course.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                
+            }
+            //Name,Location and Course
+            if (txtName.Text != "" && txtLocation.Text != "" && txtCourse.Text != "")
+            {
+                String name = txtName.Text;
+                String course = txtCourse.Text;
+                String location = txtLocation.Text;
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB WHERE Uploader = '" + name.ToString() + "' AND GolfCourse ='" + course.ToString() + "' AND ImageLocation ='" + location.ToString() + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+                con.Close();
+                
+            }
+
+            btnAll.Visible = true;
+        }
+
         protected void btnName_Click(object sender, EventArgs e)
         {
-            String name = txtName.Text;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from ImageToDB WHERE Uploader = '" + name.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            DataList1.DataSource = dt;
-            DataList1.DataBind();
-
-            con.Close();
-            btnAll.Visible = true;
+            selectQuery();
         }
 
-       
 
-        protected void btnLocation_Click(object sender, EventArgs e)
-        {
-            String name = txtLocation.Text;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from ImageToDB WHERE ImageLocation = '" + name.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            DataList1.DataSource = dt;
-            DataList1.DataBind();
 
-            con.Close();
-            btnAll.Visible = true;
-        }
 
-        protected void btnCourse_Click(object sender, EventArgs e)
-        {
-            String name = txtCourse.Text;
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from ImageToDB WHERE GolfCourse = '" + name.ToString() + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            DataList1.DataSource = dt;
-            DataList1.DataBind();
-
-            con.Close();
-            btnAll.Visible = true;
-        }
     }
 }

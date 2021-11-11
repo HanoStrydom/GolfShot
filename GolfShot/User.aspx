@@ -73,24 +73,19 @@
         </table>
 
             <asp:DataList ID="DataList1" runat="server" align="center">
-            <ItemTemplate>
-                <table>
-                    <tr>
-                        <td> <h3> Image </h3> </td>
-                        <td> <h3> Image Name </h3> </td>
-                    </tr>
-                    <tr> 
-                        <td> <img src="<%#Eval("ImagePath") %>" height ="200", width = "200" /></td>
-                        <td align ="center"> <h3> <%# Eval("ImageName") %> </h3> </td>
-                    </tr>
-                </table>
-            </ItemTemplate>
-        </asp:DataList>
-
-           
-
-            
-
+                <ItemTemplate>
+                    <table>
+                        <tr>
+                            <td> <h3> Image </h3> </td>
+                            <td> <h3> Image Name </h3> </td>
+                        </tr>
+                        <tr> 
+                            <td> <img src="<%#Eval("ImagePath") %>" height ="200", width = "200" /></td>
+                            <td align ="center"> <h3> <%# Eval("ImageName") %> </h3> </td>
+                        </tr>
+                    </table>
+                </ItemTemplate>
+            </asp:DataList>
         </div>
     </form>
 </body>

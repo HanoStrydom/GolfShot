@@ -34,8 +34,8 @@
                 <td style="height: 31px; width: 309px;">
                     <asp:TextBox ID="txtName" runat="server" Width="243px"></asp:TextBox>
                 </td>
-                <td style="height: 31px" class="text-left">
-                    <asp:Button ID="btnName" runat="server" OnClick="btnName_Click" Text="Search" Width="200px" />
+                <td class="text-left" rowspan="3">
+                    <asp:Button ID="btnName" runat="server" OnClick="btnName_Click" Text="Search" Width="189px" Height="61px" />
                 </td>
             </tr>
             <tr>
@@ -45,17 +45,11 @@
                 <td style="width: 309px">
                     <asp:TextBox ID="txtLocation" runat="server" Width="243px"></asp:TextBox>
                 </td>
-                <td class="text-left">
-                    <asp:Button ID="btnLocation" runat="server" OnClick="btnLocation_Click" Text="Search" Width="200px" />
-                </td>
             </tr>
             <tr>
                 <td class="text-right" style="width: 548px">Search By Course: </td>
                 <td style="width: 309px">
                     <asp:TextBox ID="txtCourse" runat="server" Width="243px"></asp:TextBox>
-                </td>
-                <td class="text-left">
-                    <asp:Button ID="btnCourse" runat="server" OnClick="btnCourse_Click" Text="Search" Width="200px" />
                 </td>
             </tr>
         </table>
