@@ -42,7 +42,6 @@ namespace GolfShot.Account
                         userLoggedIn["mail"] = Email.Text;
                         Response.Cookies.Add(userLoggedIn);
                         userLoggedIn.Expires = DateTime.Now.AddDays(5);                       
-                        Response.Redirect("/View");
                         IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
                         
                         break;
