@@ -4,11 +4,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     
-    <h2 align="center"><strong> <%# Eval("GolfCourse") %>. </strong><table style="width:100%;">
+    <h2 align="center"><strong> <%# Eval("GolfCourse") %>View Images </strong><table style="width:100%;">
         <tr>
-            <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 234px"><a href="/Upload">Upload Image</a></button></td>
-            <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 234px"><a href="/User">MyImages</a></button></td>
-            <td class="modal-sm" style="width: 301px" align ="center"> <button style="width: 260px"><a href="/MetaData">ImageInformation</a></button></td>
+            <td class="modal-sm" style="width: 301px; height: 63px;" align ="center"> <button style="width: 234px"><a href="/Upload">Upload Image</a></button></td>
+            <td class="modal-sm" style="width: 301px; height: 63px;" align ="center"> <button style="width: 234px"><a href="/User">MyImages</a></button></td>
+            <td class="modal-sm" style="width: 301px; height: 63px;" align ="center"> <button style="width: 260px"><a href="/MetaData">ImageInformation</a></button></td>
         </tr>
         </table>
     </h2>

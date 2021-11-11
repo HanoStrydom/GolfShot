@@ -88,6 +88,7 @@ namespace GolfShot
                     if (isDeleted == true)
                     {
                         Server.TransferRequest(Request.Url.AbsolutePath, false);
+                        Label2.Text = imageName + " was succesfully deleted!";
                         TextBox1.Text = "";
                     }
                     else
@@ -97,9 +98,9 @@ namespace GolfShot
                 }
                 else
                 {
-                    Label2.Text = "Please privide a photo!";
+                    Label2.Text = "Please provide a photo name!";
                 }
-                Label2.Text = imageName + " was succesfully deleted!";
+                
 
             }
             catch(Exception ex)
