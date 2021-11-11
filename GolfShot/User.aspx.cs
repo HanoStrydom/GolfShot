@@ -81,13 +81,13 @@ namespace GolfShot
                     cmd.ExecuteNonQuery();
                     con.Close();
 
+                    //Delete from the container
                     CloudBlockBlob blockBlob = container.GetBlockBlobReference(imageName);
                     bool isDeleted = blockBlob.DeleteIfExists();
 
                     if (isDeleted == true)
                     {
                         Server.TransferRequest(Request.Url.AbsolutePath, false);
-                        Label2.Text = imageName + " was succesfully deleted!";                      
                         TextBox1.Text = "";
                     }
                     else
@@ -99,13 +99,13 @@ namespace GolfShot
                 {
                     Label2.Text = "Please privide a photo!";
                 }
+                Label2.Text = imageName + " was succesfully deleted!";
 
-                
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 Label2.Text = "I got error: " + ex;
             }
-            
         }
     }
 }

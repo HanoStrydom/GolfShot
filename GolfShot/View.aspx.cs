@@ -50,5 +50,92 @@ namespace GolfShot
         {
 
         }
+
+        protected void btnAll_Click(object sender, EventArgs e)
+        {
+            HttpCookie test = Request.Cookies["UserLogIn"];
+            String name = "";
+            if (test != null)
+            {
+                name = test["mail"];
+            }
+            Label1.Text = name;
+
+            try
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from ImageToDB";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                DataList1.DataSource = dt;
+                DataList1.DataBind();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script> alert('Error!')</script>");
+            }
+        }
+
+        protected void btnName_Click(object sender, EventArgs e)
+        {
+            String name = txtName.Text;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from ImageToDB WHERE Uploader = '" + name.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            DataList1.DataSource = dt;
+            DataList1.DataBind();
+
+            con.Close();
+            btnAll.Visible = true;
+        }
+
+       
+
+        protected void btnLocation_Click(object sender, EventArgs e)
+        {
+            String name = txtLocation.Text;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from ImageToDB WHERE ImageLocation = '" + name.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            DataList1.DataSource = dt;
+            DataList1.DataBind();
+
+            con.Close();
+            btnAll.Visible = true;
+        }
+
+        protected void btnCourse_Click(object sender, EventArgs e)
+        {
+            String name = txtCourse.Text;
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from ImageToDB WHERE GolfCourse = '" + name.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            DataList1.DataSource = dt;
+            DataList1.DataBind();
+
+            con.Close();
+            btnAll.Visible = true;
+        }
     }
 }

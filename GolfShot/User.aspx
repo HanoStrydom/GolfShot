@@ -7,7 +7,7 @@
     <title></title>
     <style type="text/css">
         
-        table,th,td{
+        td{
             border: 1px solid black;
             padding: 5px;
         }
@@ -15,17 +15,25 @@
         table{
             border-spacing: 15px;
         }
+            
         .auto-style1 {
             width: 169px;
+            height: 40px;
         }
         .auto-style2 {
             width: 264px;
+            height: 40px;
         }
         .auto-style3 {
-            width: 1372px;
+            width: 1435px;
+            height: 40px;
         }
         .auto-style4 {
-            width: 150px;
+            width: 141px;
+            height: 40px;
+        }
+        .auto-style5 {
+            width: 100%;
         }
         </style>
 </head>
@@ -47,7 +55,24 @@
                 </tr>
                 </table>
 
-            <asp:DataList ID="DataList1" runat="server">
+        <table class="auto-style5">
+            <tr>
+                <td class="auto-style1">
+                    <asp:Label ID="Label1" runat="server" Text="Image name to Delete: "></asp:Label>
+                </td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="246px"></asp:TextBox>
+                </td>
+                <td class="auto-style4">
+                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Delete" Width="137px" />
+                </td>
+                <td class="auto-style3">
+                    <asp:Label ID="Label2" runat="server"></asp:Label>
+                </td>
+            </tr>
+        </table>
+
+            <asp:DataList ID="DataList1" runat="server" align="center">
             <ItemTemplate>
                 <table>
                     <tr>
@@ -67,22 +92,6 @@
             
 
         </div>
-        <table style="width:100%;">
-            <tr>
-                <td class="auto-style1">
-                    <asp:Label ID="Label1" runat="server" Text="Image name to Delete: "></asp:Label>
-                </td>
-                <td class="auto-style2">
-                    <asp:TextBox ID="TextBox1" runat="server" Width="246px"></asp:TextBox>
-                </td>
-                <td class="auto-style4">
-                    <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Delete" Width="137px" />
-                </td>
-                <td class="auto-style3">
-                    <asp:Label ID="Label2" runat="server"></asp:Label>
-                </td>
-            </tr>
-        </table>
     </form>
 </body>
 </html>
