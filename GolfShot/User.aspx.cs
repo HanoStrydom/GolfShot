@@ -24,6 +24,7 @@ namespace GolfShot
                 name = test["mail"];
             }
 
+
             try
             {
                 con.Open();
